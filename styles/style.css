@@ -30,7 +30,7 @@
   margin: 98px auto;
   padding-block: var(--padding-header, clamp(7.625rem, 7.0481rem + 2.4615vw, 8.125rem));
   padding-block-end: var(--padding-header, clamp(7.625rem, 7.0481rem + 2.4615vw, 8.125rem));
-  font-family: var(--font-accent, 'PressStart2P', 'Arial'), sans-serif;
+  font-family: var(--font-accent, 'PressStart2P', 'Arial'), fantasy;
   text-transform: uppercase;
   background-color: #fff;
   border: 2px solid currentColor;
@@ -109,7 +109,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--font-accent, 'PressStart2P', 'Arial'), sans-serif;
+  font-family: var(--font-accent, 'PressStart2P', 'Arial'), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   opacity: 50%;
@@ -163,7 +163,7 @@
   position: relative;
   background-color: #fff;
   border: 2px solid currentColor;
-  font-family: var(--font-accent, 'PressStart2P', 'Arial'), sans-serif;
+  font-family: var(--font-accent, 'PressStart2P', 'Arial'), fantasy;
   font-size: 14px;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
@@ -263,10 +263,12 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear 0s;
 }
 
 .like-icon.is-liked .sparks {
@@ -275,9 +277,8 @@
 
 .popup-save {
   inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  min-block-size: 191px;
   padding: 30px;
-  font-family: var(--font-accent, 'PressStart2P', 'Arial'), sans-serif;
+  font-family: var(--font-accent, 'PressStart2P', 'Arial'), fantasy;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -287,11 +288,11 @@
   display: grid;
   row-gap: 30px;
   grid-template-columns: 59px auto;
-  grid-template-rows: 63px 38px;
 }
 
 .popup-save[open] .button {
   grid-column: span 2;
+  padding: 10px 0;
 }
 
 .popup-save[open] .button__text {
